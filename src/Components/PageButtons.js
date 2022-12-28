@@ -10,7 +10,7 @@ import { BsFillExclamationCircleFill } from "react-icons/bs";
 export const PageButtons = () => {
     const [variant, setVariant] = useState('default');
     const [disabled, setDisabled] = useState(false);
-    const [color, setColor] = useState('primary');
+    const [color, setColor] = useState('default');
     const [size, setSize] = useState('md');
     const [shadow, setShadow] = useState(true);
 
@@ -171,14 +171,14 @@ export const PageButtons = () => {
                                     Variante:
                                     <select value={variant} onChange={event => setVariant(event.target.value)}>
                                         <option value="default">Default</option>
-                                        <option value="outlined">Outlined</option>
+                                        <option value="outline">Outline</option>
                                         <option value="text">Text</option>
                                     </select>
                                 </label>
                             </div>
                             <div>
                                 <label className='Checkbox'>
-                                    Disabilitado:
+                                    Deshabilitado:
                                     <input type="checkbox" checked={disabled} onChange={event => setDisabled(event.target.checked)} />
                                 </label>
                             </div>
