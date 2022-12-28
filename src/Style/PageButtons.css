@@ -81,3 +81,38 @@ p{
     font-size: 100%;
     text-align: center;
 }
+
+.BotonModificable{
+    display: grid;
+        grid-template-rows: 1fr;
+        grid-template-columns: 50% 50% ;
+        grid-template-areas:
+            'label0 label1';
+        gap: 0px;
+        height: 100%;
+}
+
+/* Estilos para los elementos select */
+select {
+    /* Estilos de borde y fondo */
+    border: 1px solid #ccc;
+    background-color: #fff;
+    /* Estilos de fuente */
+    font-size: 16px;
+    font-family: sans-serif;
+    /* Estilos de tamaño y margen */
+    padding: 8px;
+    width: 200px;
+    margin: 8px 0;
+}
+
+
+.Checkbox{
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 50% 5% ;
+    grid-template-areas:
+        'label0 label1 ';
+    gap: 0px;
+    height: 100%;
+}
