@@ -1,14 +1,19 @@
-import React from 'react'
+import React, { useState } from 'react';
 import Button from './../Components/Button'
 import './../Style/PageButtons.css'
 import { BsFillBookmarkStarFill } from "react-icons/bs";
 import { BsFillExclamationTriangleFill } from "react-icons/bs";
 import { BsFillExclamationOctagonFill } from "react-icons/bs";
 import { BsFillExclamationCircleFill } from "react-icons/bs";
-import { BsFillExclamationDiamondFill } from "react-icons/bs";
 
 
 export const PageButtons = () => {
+    const [variant, setVariant] = useState('default');
+    const [disabled, setDisabled] = useState(false);
+    const [color, setColor] = useState('primary');
+    const [size, setSize] = useState('md');
+    const [shadow, setShadow] = useState(true);
+
     return (
         <>
             <center>
@@ -34,6 +39,13 @@ export const PageButtons = () => {
                                 <Button variant="text">Click me!</Button>
                             </div>
                         </div>
+                        <div id="item-3">
+                            {/* Añadir boton con sombra */}
+                            <p>Boton con sombra</p>
+                            <div title='<Button shadow />'>
+                                <Button shadow>Click me!</Button>
+                            </div>
+                        </div>
                     </div>
 
                     <div className='BotonesDesahbilitar'>
@@ -41,7 +53,7 @@ export const PageButtons = () => {
                             {/* Añadir boton deshabilitado */}
                             <p>Boton deshabilitado</p>
                             <div title='<Button disabled />'>
-                                <Button className="button-disabled" disabled>Click me!</Button >
+                                <Button disabled>Click me!</Button >
                             </div>
 
                         </div>
@@ -49,7 +61,7 @@ export const PageButtons = () => {
                             {/* Añadir boton disabled Shadow*/}
                             <p>Boton deshabilitado con sombra</p>
                             <div title='<Button disabledShadow />'>
-                                <Button className="button-disabled-shadow" disabledShadow>Click me!</Button>
+                                <Button  disabledShadow>Click me!</Button>
                             </div>
                         </div>
                         <div id="item-2">
@@ -74,32 +86,25 @@ export const PageButtons = () => {
                         <div id='item-0'>
                             <p>Boton con icono</p>
                             <div title='<Button icon>'>
-
+                                <Button icon={<BsFillBookmarkStarFill />} iconPosition="left" > Click me! </Button>
                             </div>
-                            <Button>Click me! <BsFillBookmarkStarFill /></Button>
                         </div>
                         <div id='item-1'>
                             <p>Boton con icono y contorno</p>
                             <div title='<Button icon variant="outline">'>
-                                <Button variant="outline">Click me! <BsFillExclamationTriangleFill /></Button>
+                                <Button variant="outline" icon={<BsFillExclamationTriangleFill />} iconPosition="right"> Click me! </Button>
                             </div>
                         </div>
                         <div id='item-2'>
                             <p>Boton con icono y texto</p>
                             <div title='<Button icon variant="text">'>
-                                <Button variant="text">Click me! <BsFillExclamationOctagonFill /></Button>
+                                <Button variant="text" icon={< BsFillExclamationOctagonFill />} iconPosition="left"> Click me! </Button>
                             </div>
                         </div>
                         <div id='item-3'>
                             <p>Boton con icono deshabilitado</p>
                             <div title='<Button icon disabled>'>
-                                <Button disabled>Click me! <BsFillExclamationCircleFill /></Button>
-                            </div>
-                        </div>
-                        <div id='item-4'>
-                            <p>Boton con icono deshabilitado con sombra</p>
-                            <div title='<Button icon disabledShadow>'>
-                                <Button disabledShadow>Click me! <BsFillExclamationDiamondFill /></Button>
+                                <Button disabled icon={<BsFillExclamationCircleFill />} iconPosition="right"> Click me! </Button>
                             </div>
                         </div>
                     </div>
@@ -153,6 +158,64 @@ export const PageButtons = () => {
                             </div>
                         </div>
                     </div>
+
+                    <center>
+                        <h2 className='Titulo'>Modificable</h2>
+                        <Button variant={variant} disabled={disabled} size={size} color={color} shadow={shadow}>Click me!</Button>
+                        <div>
+                            <label>
+                                Variant:
+                                <select value={variant} onChange={event => setVariant(event.target.value)}>
+                                    <option value="default">Default</option>
+                                    <option value="outlined">Outlined</option>
+                                    <option value="text">Text</option>
+                                </select>
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Disabled:
+                                <input type="checkbox" checked={disabled} onChange={event => setDisabled(event.target.checked)} />
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Shadow:
+                                <input type="checkbox" checked={shadow} onChange={event => setShadow(event.target.checked)} />
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Color:
+                                <select value={color} onChange={event => setColor(event.target.value)}>
+                                    <option value="default">Default</option>
+                                    <option value="primary">Primary</option>
+                                    <option value="secondary">Secondary</option>
+                                    <option value="danger">Danger</option>
+                                </select>
+
+                            </label>
+                        </div>
+                        <div>
+                            <label>
+                                Size:
+                                <select value={size} onChange={event => setSize(event.target.value)}>
+                                    <option value="
+                                    ">Default</option>
+                                    <option value="sm">Small</option>
+                                    <option value="md">Medium</option>
+                                    <option value="lg">Large</option>
+                                </select>
+                            </label>
+                        </div>
+
+
+
+
+
+
+                    </center>
+
                 </div>
             </center>
         </>

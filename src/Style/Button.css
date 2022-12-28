@@ -10,9 +10,7 @@
     transition: background-color 0.2s ease;
 }
 
-.button:hover {
-    background-color: rgb(21, 78, 97);
-}
+
 /*Varieda de botones*/
 .button-outline {
     background-color: transparent;
@@ -29,25 +27,27 @@
     text-decoration: underline;
 }
 
-.button-disabled{
-    box-shadow: none;
-    cursor: not-allowed;
-}
-.button-disabled:hover {
-    background-color: rgb(3, 3, 61);
-}
-
-
-.button-disabled-shadow {
-    box-shadow: none;
-    cursor: not-allowed;
+.button-shadow{
     /* Aññadir un efecto de sombra */
-        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
-}
-.button-disabled-shadow:hover {
-    background-color: rgb(3, 3, 61);
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.5);
+    transition: background-color 0.2s ease;
 }
 
+/* Botones desabilitados */
+.button-disabled{
+    background-color: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+}
+.button-disabled-shadow {
+    /* Aññadir un efecto de sombra */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+    background-color: #6c757d;
+    color: #fff;
+    cursor: not-allowed;
+}
+
+/* Botones tamaño */
 .button-sm {
     font-size: 14px;
     padding: 8px 16px;
@@ -62,15 +62,15 @@
     font-size: 22px;
     padding: 16px 32px;
 }
-
+/* Tamaño colores */
 .button-primary {
     background-color: #007bff;
     color: #fff;
 }
 
 .button-secondary {
-    background-color: #6c757d;
-    color: #fff;
+    background-color: #1eff00;
+    color: rgb(255, 255, 255);
 }
 
 .button-danger {
