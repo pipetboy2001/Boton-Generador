@@ -3,12 +3,14 @@ import ReactDOM from 'react-dom/client';
 import './index.css';
 import reportWebVitals from './reportWebVitals';
 import { PageButtons } from './Components/PageButtons';
+import { Footer } from './Components/Footer';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
   
 
-  <PageButtons />
+  <><PageButtons /><Footer /></>
+
 
 );
 
