@@ -1,0 +1,67 @@
+.container-class {
+    width: 70%;
+    background-color: lightblue;
+    margin: 20px;
+    padding: 10px;
+    border: 1px solid black;
+    border-radius: 5px;
+    font-size: 16px;
+    transition: background-color 0.2s ease;
+    
+}
+
+.container-class>div {
+    margin: 3%;
+}
+
+.BotonesBasicos {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'label0 label1 label2';
+    gap: 0px;
+    height: 100%;
+
+}
+
+.BotonesDesahbilitar {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'label0 label1 label2 label3';
+    gap: 0px;
+    height: 100%;
+}
+
+.BotonesIconos {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'label0 label1 label2 label3 label4';
+    gap: 0px;
+    height: 100%;
+}
+
+.BotonesTamaños {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-areas:
+        'label0 label1 label2';
+    gap: 0px;
+    height: 100%;
+
+}
+
+.BotonesColores {
+    display: grid;
+    grid-template-rows: 1fr;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-areas:
+        'label0 label1 label2 label3';
+    gap: 0px;
+    height: 100%;
+}
