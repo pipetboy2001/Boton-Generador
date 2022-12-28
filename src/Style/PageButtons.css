@@ -1,6 +1,6 @@
 .container-class {
     margin: auto;
-    width: 70%;
+    width: 80%;
     /* Centra el elemento */
     background-color: #185292;
     margin: 20px;
@@ -19,7 +19,7 @@
 
 .Titulo{
     color: aliceblue;
-    font-size: 30px;
+    font-size: 200%;
     font-weight: bold;
     text-align: center;
 
@@ -28,18 +28,17 @@
 .BotonesBasicos {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
     grid-template-areas:
         'label0 label1 label2';
     gap: 0px;
     height: 100%;
-
 }
 
 .BotonesDesahbilitar {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas:
         'label0 label1 label2 label3';
     gap: 0px;
@@ -49,9 +48,9 @@
 .BotonesIconos {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-columns: 20% 20% 20% 20% 20%;
     grid-template-areas:
-        'label0 label1 label2 label3 label4';
+        'label0 label1 label2 label3 label4 label5';
     gap: 0px;
     height: 100%;
 }
@@ -59,7 +58,7 @@
 .BotonesTamaños {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr;
+    grid-template-columns: 33.3333% 33.3333% 33.3333%;
     grid-template-areas:
         'label0 label1 label2';
     gap: 0px;
@@ -70,9 +69,15 @@
 .BotonesColores {
     display: grid;
     grid-template-rows: 1fr;
-    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-columns: 25% 25% 25% 25%;
     grid-template-areas:
         'label0 label1 label2 label3';
     gap: 0px;
     height: 100%;
+}
+
+p{
+    color: aliceblue;
+    font-size: 100%;
+    text-align: center;
 }
