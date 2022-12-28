@@ -6,6 +6,7 @@ const Button = (props) => {
     const className = classnames('button', {
         'button-outline': props.variant === 'outline',
         'button-text': props.variant === 'text',
+        'button-disabled': props.disabled,
         'button-disabled-shadow': props.disabledShadow,
         'button-sm': props.size === 'sm',
         'button-md': props.size === 'md',

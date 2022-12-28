@@ -1,6 +1,6 @@
 /*Boton principal*/
 .button {
-    background-color: blue;
+    background-color: rgb(3, 3, 61);
     color: white;
     padding: 10px 20px;
     border: none;
@@ -11,26 +11,41 @@
 }
 
 .button:hover {
-    background-color: lightblue;
+    background-color: rgb(21, 78, 97);
 }
 /*Varieda de botones*/
 .button-outline {
     background-color: transparent;
-    color: blue;
+    color: rgb(255, 255, 255);
     border: 2px solid blue;
     transition: border-color 0.2s ease;
 }
 
 .button-text {
     background-color: transparent;
-    color: blue;
+    color: rgb(255, 255, 255);
     border: none;
     font-size: 16px;
     text-decoration: underline;
 }
 
+.button-disabled{
+    box-shadow: none;
+    cursor: not-allowed;
+}
+.button-disabled:hover {
+    background-color: rgb(3, 3, 61);
+}
+
+
 .button-disabled-shadow {
     box-shadow: none;
+    cursor: not-allowed;
+    /* Aññadir un efecto de sombra */
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.9);
+}
+.button-disabled-shadow:hover {
+    background-color: rgb(3, 3, 61);
 }
 
 .button-sm {
